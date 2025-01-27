@@ -1,0 +1,188 @@
+/* Animation for page load */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Report Container Styling */
+.premium-report-container {
+    padding: 40px;
+    background-color: #fff;
+    color: #1f1f2e;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out; /* Apply the fadeIn animation */
+}
+
+.premium-report-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Button container with space between buttons */
+.premium-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.premium-btn-view, .premium-btn-download {
+    background-color: #16a085;
+    color: white;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Animation for hover effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.premium-btn-view:hover, .premium-btn-download:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05); /* Slight scale up effect */
+}
+
+/* Table Styling */
+.premium-styled-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    font-size: 16px;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.premium-styled-table th {
+    background: linear-gradient(135deg, #3498db, #2ecc71); /* Gradient background */
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px; /* Increased font size */
+    font-weight: 600;
+    padding: 20px; /* More padding */
+    border-radius: 8px;
+    cursor: pointer; /* Change cursor to pointer for clickable headers */
+    position: relative; /* Positioning for the sort arrow */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Transition for background on hover */
+}
+
+.premium-styled-table th:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+}
+
+.premium-styled-table td {
+    background-color: #ffffff; /* White background for rows */
+    color: #34495e;
+    padding: 15px;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.8s ease-in-out; /* Apply fade-in animation to rows */
+}
+
+.premium-styled-table td:hover {
+    background-color: #e8f8f5; /* Soft green hover effect */
+}
+
+/* Premium Table Row Hover Effect */
+.premium-table-row:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for table row on hover */
+.premium-table-row {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Row alternation */
+.premium-styled-table tbody tr:nth-child(even) td {
+    background-color: #f4f8f9; /* Light gray for alternation */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .premium-report-container {
+        padding: 20px;
+    }
+
+    .premium-btn-view, .premium-btn-download {
+        padding: 10px 20px;
+    }
+
+    .premium-styled-table th, .premium-styled-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Add a sort direction indicator */
+.premium-styled-table th:after {
+    content: ''; /* Add an empty content for sort indicator */
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.premium-styled-table th[sort-direction="ascending"]:after {
+    content: '↑'; /* Up arrow for ascending */
+}
+
+.premium-styled-table th[sort-direction="descending"]:after {
+    content: '↓'; /* Down arrow for descending */
+}
+
+.premium-search-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.premium-search-input {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+}
+
+.premium-search-bar {
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* Add padding to accommodate the clear icon */
+    border: 1px solid #ccc;
+    border-radius: 30px; /* Rounded corners for a classy look */
+    font-size: 16px;
+    transition: border 0.3s ease;
+    outline: none;
+}
+
+.premium-search-bar:focus {
+    border-color: #4A90E2; /* Change to your desired focus color */
+}
+
+.clear-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #4A90E2; /* Icon color */
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s ease;
+}
+
+.clear-icon:hover {
+    color: #FF4C4C; /* Change color on hover */
+}
